@@ -1,0 +1,74 @@
+{
+	"partidos": [
+		{"id": "0001",
+		 "dia": "friday, 5 january",
+		 "time": "20:00h",
+		 "team1": "001",
+		 "team2": "002",
+		 "stadium": "001"
+		},
+		{"id": "0002",
+		 "dia": "saturday, 6 january",
+		 "time": "19:30h",
+		 "team1": "007",
+		 "team2": "004",
+		 "stadium": "007"
+		},
+		{"id": "0003",
+		 "dia": "saturday, 6 january",
+		 "time": "19:00h",
+		 "team1": "003",
+		 "team2": "006",
+		 "stadium": "003"
+		},
+		{"id": "0004",
+		 "dia": "monday, 8 january",
+		 "time": "17:30h",
+		 "team1": "005",
+		 "team2": "002",
+		 "stadium": "002"
+		},
+		{"id": "0005",
+		 "dia": "tuesday, 9 january",
+		 "time": "17:30h",
+		 "team1": "001",
+		 "team2": "004",
+		 "stadium": "001"
+		},
+		{"id": "0006",
+		 "dia": "tuesday, 9 january",
+		 "time": "19:30h",
+		 "team1": "002",
+		 "team2": "006",
+		 "stadium": "002"
+		},
+		{"id": "0007",
+		 "dia": "tuesday, 9 january",
+		 "time": "21:00h",
+		 "team1": "003",
+		 "team2": "001",
+		 "stadium": "001"
+		},
+		{"id": "0008",
+		 "dia": "wednesday, 10 january",
+		 "time": "21:00h",
+		 "team1": "004",
+		 "team2": "002",
+		 "stadium": "004"
+		},
+		{"id": "0009",
+		 "dia": "thursday, 11 january",
+		 "time": "18:00h",
+		 "team1": "001",
+		 "team2": "003",
+		 "stadium": "001"
+		},
+		{"id": "0010",
+		 "dia": "friday, 12 january",
+		 "time": "22:00h",
+		 "team1": "002",
+		 "team2": "006",
+		 "stadium": "006"
+		}
+	]
+}

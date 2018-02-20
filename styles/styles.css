@@ -1,0 +1,799 @@
+/*/////////GENERAL SETTINGS/////////*/
+
+html {
+	background-image: url('../background/ground.jpg');
+	background-size: cover;
+}
+
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.mainContainer {
+	background-image: url('../background/OG2OK70.jpg');
+	/*	background-size: cover;*/
+	/*	background-size: 100% 300%;*/
+	background-size: 800px 1600px;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	padding: 0 !important;
+	padding-bottom: 30px !important;
+	overflow-x: hidden;
+}
+
+.nonScroll {
+	height: 100vh;
+	overflow-y: hidden;
+}
+
+.pageMarginTop {
+	margin-top: 50px;
+}
+
+.marginTop2 {
+	margin-top: 150px;
+}
+
+/*/////////NAVIGATION BAR/////////*/
+.navigationBar {
+	background-color: white;
+	position: fixed !important;
+	z-index: 3000;
+	top:0px !important;
+	height: 50px;
+	width: 100%;
+	margin: 0 !important;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+/*////////////BACK BUTTON////////////*/
+.backSpace img {
+	transform: rotate(180deg);
+	height: 15px;
+	filter: brightness(0) invert(1);
+}
+
+.backimage {
+	padding-top:10px;
+	padding-right: 0px !important;	
+}
+
+.backtext {
+	padding-left: 0 !important;
+}
+
+.backSpace {
+	margin-bottom: 10px;
+	z-index: 3500;
+}
+
+.backSpace p{
+	color: white;
+	margin: 10px 0 0px 0px;
+	font-size: 18px;
+}
+
+/*////////////BACK CHATS BUTTON////////////*/
+.backSpaceChat img {
+	transform: rotate(180deg);
+	height: 15px;
+	filter: brightness(0) invert(1);
+}
+
+.backimage {
+	padding-top:10px;
+	padding-right: 0px !important;	
+}
+
+.backtext {
+	padding-left: 0 !important;
+}
+
+.backSpaceChat {
+	margin-bottom: 10px;
+	z-index: 3500;
+}
+
+.backSpaceChat p{
+	color: white;
+	margin: 10px 0 0px 0px;
+	font-size: 18px;
+}
+
+/*/////////SIDENAV MENU/////////*/
+
+.sidenav {
+	height: 100%; /* 100% Full-height */
+	width: 200px; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: -1;
+	top: 0; /* Stay at the top */
+	left: 0;
+	overflow-x: hidden; /* Disable horizontal scroll */
+	overflow-y: hidden;
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav a {
+	width: 120px;
+	padding: 6px 200px 6px 32px;
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	/*    color: #cccccc;*/
+	display: block;
+	transition: 1s;
+}
+
+.sidenav a:hover {
+
+	background-color: #f2f2f2;
+	text-decoration: none;
+	color:  #999999;
+}
+
+.active {
+	background-color: #f2f2f2;
+	text-decoration: none;
+	color: #999999 !important;
+}
+
+#mainContainer {
+	transition: margin-left 1s;
+	transition: cropBody 1s;
+	padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+
+.cropBody {
+	z-index: 99;
+	position: absolute;
+	top: 10px;
+	/*    box-shadow: -7px 16px 50px 4px #666666;*/
+	box-shadow: -7px 16px 50px 4px black;
+}
+
+/*/////////////////////MENU BUTTON/////////////////////*/
+.menuButton {
+	margin-left: -30px !important;
+	z-index: 39000;
+}
+
+#nav-icon {
+	width: 30px;
+	height: 45px;
+	position: relative;
+	margin: 50px auto;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	margin-top: 70px;
+}
+
+#nav-icon span {
+	display: block;
+	position: absolute;
+	height: 4.5px;
+	width: 100%;
+	/*	background: white;*/
+	background-image: linear-gradient(-225deg,#00cc66 35%,#00994d);
+
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+	top: 0px;
+}
+
+#nav-icon span:nth-child(2),#nav-icon span:nth-child(3) {
+	top: 9px;
+}
+
+#nav-icon span:nth-child(4) {
+	top: 18px;
+}
+
+#nav-icon.open span:nth-child(1) {
+	top: 9px;
+	width: 0%;
+	left: 50%;
+}
+
+#nav-icon.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#nav-icon.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#nav-icon.open span:nth-child(4) {
+	top: 9px;
+	width: 0%;
+	left: 50%;
+}
+
+/*//////////////////LIST OF GAMES PAGE//////////////////*/
+
+.mainSchedule {
+	margin-top: 15px;
+}
+
+.LOGPdaySchedule p {
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.daySchedule {
+	text-transform: uppercase;
+	color: white;
+}
+
+.teamTitle {
+	text-transform: uppercase;
+	color: #999999;
+	font-size: 20px;
+}
+
+.LOGPmatch {
+	height: 100px;
+	margin: 0px 0px 15px 0px!important;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	background-color: white;
+}
+
+.arrow img{
+	height: 16px;
+	filter: brightness(0) invert(0.7);
+}
+
+
+.team2 {
+	padding-top: 10px;
+}
+
+.LOGPDtime {
+	text-align: center;
+	font-size: 16px;
+	padding: 0 0 0 0px !important;
+	color: #b3b3b3;
+}
+
+.LOGPlogo {
+	padding: 0 !important;
+}
+
+.LOGPlogo img{
+	width: 30px;
+	height: 30px;
+}
+
+.LOGPlogo {
+	padding: 0 !important;
+}
+
+.LOGPlogo img{
+	width: 30px;
+	height: 30px;
+}
+
+.LOGPteam {
+	display: table-cell;
+	vertical-align: middle;
+	color: #999999;
+	padding-left: 5px !important;
+}
+
+.LOGPteam p{
+	font-size: 14px;
+	margin: 0 !important;
+	padding-top: 5px;
+}
+
+.LOGPteams {
+	padding: 0 !important;
+}
+
+.border1 {
+	border: 0.5px solid black;
+	/*	height: 30px;*/
+}
+
+/*////////////SPECIFIC GAME PAGE////////////*/
+
+.textGame {
+	padding: 20px;
+	text-align: center;
+	color: #999999;
+}
+
+.paddingTop {
+	padding-top: 20px;
+}
+
+.teamEscudo {
+	padding-bottom: 30px;
+}
+.teamEscudo img {
+	height: 100px;
+	margin-top: 10px;
+}
+
+.escudos {
+	margin-left: 10px;
+	height: 70px;
+	width: 70px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	border-radius: 100px;
+}
+
+.escudos img {
+	height: 50px;
+	margin-top: 10px;
+}
+
+.escudo {
+	padding: 0 !important;
+}
+.equipos {
+	margin-bottom: 40px;
+}
+.equipo {
+	margin-top: 20px;
+}
+
+.equipo p {
+	margin: 0 0 0 0px !important;
+}
+
+.location {
+	color: #00cc66 ;
+}
+
+.biggerTime{
+	font-size: 35px;
+	text-transform: lowercase !important;
+	margin-bottom: 0 !important;
+}
+
+.gameContainer{
+	height: 95%;
+	width: 95% !important;
+	margin: auto !important;
+	background-color: white;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.googleMap {
+	height: 400px;
+}
+
+.googleMap iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.mapLink a {
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+gm-style {
+	margin: 10px;
+}
+
+.mapImage {
+	height: 50px;
+}
+.adress {
+	margin-top: 20px;
+	font-size: 14px;
+	color: #999999;
+}
+
+.dayGameDetail p{
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+/*TEAMS LIST*/
+
+.TLspaces {
+	height: 60px;
+	margin: 0px 0px 15px 0px!important;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	background-color: white;
+	padding-left: 15px;
+}
+
+.TLteam {
+	margin-bottom: 0px !important;
+	color: #999999;
+}
+
+.TLtitle p{
+	text-transform: uppercase;
+	color: white;
+}
+
+/*PAGES TRANSITIONS*/
+#pages > div {
+	display: none;
+}
+
+#pages > div.current {
+	display: block;
+}
+
+.in, .out {
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 300ms;
+}
+
+@-webkit-keyframes fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@-webkit-keyframes fade-in-out {
+	from { opacity: 0; }
+	50% { opacity: 1; }
+	to { opacity: 0; }
+}
+
+.fade.in {
+	-webkit-animation-name: fade-in;
+	z-index: 10;
+}
+.fade.out {
+	z-index: 0;
+}
+
+.borderRight {
+	border-right: 5px solid red;
+}
+
+.landscapeStyleForGames {
+	padding-right: 30px !important;
+	padding-left: 5px !important;
+}
+
+.landscapeStyleForList {
+	padding-right: 0px !important;
+}
+
+.marginL0 {
+	margin-left: 0px !important;
+}
+
+.teamImage img {
+	width: 100%;
+	margin: 10px 0 10px 0;
+}
+
+.moreInfo {
+	color: #999999;
+}
+
+.moreInfo div {
+	margin-bottom: 10px;
+}
+
+.rrss{
+	margin-top: 10px;
+}
+
+.rrss img {
+	width: 30px;
+}
+
+.rrssP0 {
+	padding: 0 !important;
+}
+
+.littleFont {
+	font-size: 14px;
+}
+
+a.userIcon {
+	width: 30px;
+	height: 30px;
+	background-image: url('../logos/chat2.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/*CHAT PAGE*/
+.userSpace {
+	height: 89vh;
+	width: 95% !important;
+	margin: auto !important;
+	margin-top: 10px !important;
+	padding-top: 30px;
+	background-color: white;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.chatSpaceGeneral{
+	margin-top: 0!important;
+	padding-top: 10px !important;
+	height: 83vh !important;
+}
+
+.loginsGoogle img {
+	width: 20px;
+	margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+.loginsGoogle {
+	color: #999999;
+	background-color: white;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.login {
+	margin-top: 100px;
+}
+
+.greetings p{
+	color: #999999;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.logsSpace {
+	height: 100px;
+}
+
+.logsSpace2 {
+	height: 80px;
+}
+
+.oculto > button{
+	display: none;
+}
+
+.oculto > div{
+	display: none;
+}
+
+.helloName p {
+	padding-left: 0;
+}
+
+.messagesSpace {
+	background-image: url(../images/fondoChat.jpeg);
+	width: 100%;
+	height: 420px;
+	/*    background-color: white;*/
+	border: 1px solid #999999;
+	margin-bottom: 10px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 10px 10px 10px 10px;
+	margin-right: 0 !important;
+}
+
+.inputSpace {
+	width: 80%;
+	background-color: white;
+	border: 1px solid #999999;
+	border-radius: 50px;
+	height: 35px;
+}
+
+.inputSpace input{
+	width: 95%;
+	margin-left: 10px;
+	margin-top: 5px;
+	border: 0 !important;
+	background-color: transparent;
+}
+
+.inputSpace input:focus{
+	outline: none;
+	border: 0 !important;
+	background-color: transparent;
+}
+
+.othersSMS {
+	margin-top: 10px;
+	vertical-align: center;
+	min-height: 20px;
+	background-color: #f2f2f2;
+	padding: 5px 5px 5px 10px;
+	border-radius: 0px 15px 15px 15px;
+	font-size: 14px;
+	margin-left: 10px;
+	width: 82%;
+	white-space:normal;
+	word-wrap:break-word;
+}
+
+.mySMS {
+	vertical-align: center;
+	min-height: 20px;
+	background-image: linear-gradient(-225deg,#00cc66 35%,#00994d);
+	padding: 5px 10px 5px 10px;
+	border-radius: 15px 0px 15px 15px;
+	font-size: 14px;
+	width: 80%;
+	margin-left: 15%;
+	text-align: right;
+	margin-top: 10px;
+	word-wrap:break-word;
+}
+
+.sendSpace {
+	width: 15%;
+	margin-left: 3%;
+}
+
+.buttonSendSMS {
+	background-image: linear-gradient(-225deg,#00cc66 35%,#00994d);
+	height: 100%;
+	border-radius: 50px;
+	border: 1px solid #999999;
+}
+
+.buttonSendSMS img {
+	width: 50%;
+	margin-left: 20%;
+	margin-top: 5px;
+}
+
+.maxWidth {
+	width: 100%;
+	margin-bottom: 0;
+/*	word-break: break-all;*/
+}
+
+.namePost{
+	font-size: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.sayHi img{
+	width: 30px;
+}
+
+.timePostOthers {
+	/*	color: #999999;*/
+	font-size: 9px;
+	margin-bottom: 0;
+	text-align: right;
+	/*	margin-left: 10px;*/
+	/*	width: 82%;*/
+}
+
+.mytimePost {
+	/*
+	font-size: 10px;
+	margin-bottom: 0;
+	text-align:right;
+	width: 80%;
+	margin-left: 15%;
+	*/
+
+	font-size: 9px;
+	margin-bottom: 0;
+	text-align: left; 
+	/* width: 80%; */
+	/* margin-left: 15%; */
+}
+
+.morePosts{
+	margin-bottom: 10px;
+	border-radius: 20px;
+	padding: 0 !important;
+	width: 30px;
+	background-color: #f2f2f2;
+	text-align: center;
+	height: 20px;
+	/*	z-index: 150;*/
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+.loader {
+	border: 5px solid #f3f3f3;
+	border-top: 5px solid #3498db;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.dateChat {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+/*
+.dateChatBack {
+width: 90%;
+margin: auto;
+border-radius: 30px;
+background-color: rgba(255, 255, 255, 0.3);
+}
+*/
+/*CHATS SELECTOR PAGE*/
+
+.chatsSelector {
+	background-color: white;
+	width: 100%;
+	height: 350px;
+	/*    border: 1px solid #999999;*/
+	margin-bottom: 10px;
+	/*    overflow-y: auto;*/
+	/*    padding: 10px 10px 10px 10px;*/
+	margin-right: 0 !important;
+
+}
+
+.chatSelectorMatch{
+	height: 80px;
+	text-align: center;
+	border-radius: .25rem;
+	border: 1px solid transparent;
+	padding-top: 12px;
+	margin-bottom: 5px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+
+}
+
+.chatSelectorMatch a{
+	text-decoration: none;
+	color: #999999
+
+
+}
+
+.chatSelectorMatch img{
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.matchNameChat {
+	margin-top: 5px;
+	color: #999999;
+	/*    margin-bottom: 10px;*/
+}

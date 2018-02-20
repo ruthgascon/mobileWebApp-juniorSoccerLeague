@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:62588/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Soccer League</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--		stylesheet css-->
+		<link rel="stylesheet" href="./Soccer League_files/styles.css">
+		<!--		jquery-->
+		<script src="./Soccer League_files/cb=gapi.loaded_0" async=""></script><script src="./Soccer League_files/jquery.min.js"></script>
+		<!--		mustache-->
+		<script src="./Soccer League_files/mustache.min.js"></script>
+		<!--		bootstrap-->
+		<link rel="stylesheet" href="./Soccer League_files/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<!--		mobile app settings-->
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white">
+		<meta name="apple-mobile-web-app-title" content="NYSL">
+		<!--LAUNCH IMAGE-->
+		<link rel="apple-touch-startup-image" href="http://localhost:62588/images/launch2.png">
+		<!--ICON -->
+		<link rel="apple-touch-icon" href="http://localhost:62588/images/logo_60.jpg">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:62588/images/logo_76.jpg">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:62588/images/logo_120.jpg">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:62588/images/logo_152.jpg">
+	<script type="text/javascript" charset="UTF-8" src="./Soccer League_files/api.js" gapi_processed="true"></script></head>
+
+	<body>
+		<div id="mySidenav" class="sidenav">
+			<a href="http://localhost:62588/index.html#page-index" class="">Matches</a>
+			<a href="http://localhost:62588/index.html#page-teamsList">Teams</a>
+			<a href="http://localhost:62588/index.html#page-stadiums">Stadiums</a>
+		</div>
+
+		<div class="mainContainer container-fluid" id="mainContainer" style="margin-left: 0px;">
+			<nav class="navbar navbar-default navbar-static-top navigationBar">
+				<div class="container-fluid">
+					<div class="row menuButton">
+						<div class="col-1 col-offset-1">
+							<div id="nav-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row nav navbar-nav navbar-right" id="userPageLink">
+						<a href="http://localhost:62588/index.html#page-User" class="userIcon"></a>
+					</div>
+				</div>
+			</nav>
+			<div class="row" id="pages">
+				<div id="page-index" class="col-12">
+					<div class="mainSchedule">
+						<div class="LOGPdaySchedule container-fluid" id="matchesSpace">
+						<p class="daySchedule">friday, 5 january</p><div id="0001" class="LOGPmatch row align-items-center" matchid="0001"><div class="LOGPDtime col-3">20:00h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/cd_castellon.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">CD Castellón</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/FC_Barcelona-logo.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">FC Barcelona</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><p class="daySchedule">saturday, 6 january</p><div id="0002" class="LOGPmatch row align-items-center" matchid="0002"><div class="LOGPDtime col-3">19:30h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/girona.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">Girona FC</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/borriol.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">CF Borriol</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><div id="0003" class="LOGPmatch row align-items-center" matchid="0003"><div class="LOGPDtime col-3">19:00h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/celtic.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">Celtic FC</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/zaragoza.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">Zaragoza Femenino</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><p class="daySchedule">monday, 8 january</p><div id="0004" class="LOGPmatch row align-items-center" matchid="0004"><div class="LOGPDtime col-3">17:30h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/celtic.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">Celtic FC</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/FC_Barcelona-logo.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">FC Barcelona</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><p class="daySchedule">tuesday, 9 january</p><div id="0005" class="LOGPmatch row align-items-center" matchid="0005"><div class="LOGPDtime col-3">17:30h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/cd_castellon.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">CD Castellón</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/borriol.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">CF Borriol</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><div id="0006" class="LOGPmatch row align-items-center" matchid="0006"><div class="LOGPDtime col-3">19:30h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/FC_Barcelona-logo.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">FC Barcelona</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/zaragoza.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">Zaragoza Femenino</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><div id="0007" class="LOGPmatch row align-items-center" matchid="0007"><div class="LOGPDtime col-3">21:00h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/girona.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">Girona FC</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/cd_castellon.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">CD Castellón</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><p class="daySchedule">wednesday, 10 january</p><div id="0008" class="LOGPmatch row align-items-center" matchid="0008"><div class="LOGPDtime col-3">21:00h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/borriol.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">CF Borriol</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/FC_Barcelona-logo.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">FC Barcelona</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><p class="daySchedule">thursday, 11 january</p><div id="0009" class="LOGPmatch row align-items-center" matchid="0009"><div class="LOGPDtime col-3">18:00h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/cd_castellon.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">CD Castellón</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/girona.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">Girona FC</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div><p class="daySchedule">friday, 12 january</p><div id="0010" class="LOGPmatch row align-items-center" matchid="0010"><div class="LOGPDtime col-3">22:00h</div><div class="col-7 "><div class="row"><div class="LOGPlogo col-2"><img src="./Soccer League_files/FC_Barcelona-logo.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">FC Barcelona</p></div></div><div class="row team2"><div class="LOGPlogo col-2"><img src="./Soccer League_files/zaragoza.png"></div><div class="col-10 LOGPteam"><p class="text-left align-middle">Zaragoza Femenino</p></div></div></div><div class="col-2 arrow"><img src="./Soccer League_files/arrow2.png"></div></div></div>
+					</div>
+				</div>
+				<div id="page-gameDetail" class="col-12">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="backSpace col-12">
+								<div class="row">
+									<div class="col-1 backimage">
+										<img class="" src="./Soccer League_files/arrow.png">
+									</div>
+									<div class="backtext col-11">
+										<p>Back</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="gameContainer container col-12" id="matchSpace">
+
+
+					</div>
+				</div>
+				<div id="page-stadiums" class="col-12">
+					<div class="mainSchedule container-fluid">
+						<div class="row">
+							<div class="col-12 TLtitle">
+								<p class="text-center">Stadiums</p>
+							</div>
+							<div id="stadiumsSpace" class="col-12 specificEquipo">
+			<div class="TLspaces row align-items-center" stadiumnumberid="001">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/cd_castellon.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Estadio Municipal Castalia</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" stadiumnumberid="002">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/FC_Barcelona-logo.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Camp Nou</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" stadiumnumberid="003">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/girona.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Estadi Municipal Montilivi</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" stadiumnumberid="004">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/borriol.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Campo de Fútbol El Palmar</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" stadiumnumberid="005">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/celtic.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Celtic Park</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" stadiumnumberid="006">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/zaragoza.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Zaragoza</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" stadiumnumberid="007">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/ubiqum.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Depot Lab</p>
+			</div>
+			</div>
+		</div>
+						</div>
+					</div>
+				</div>
+				<div id="page-team" class="col-12">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="backSpace col-12">
+								<div class="row">
+									<div class="col-1 backimage">
+										<img class="" src="./Soccer League_files/arrow.png">
+									</div>
+									<div class="backtext col-11">
+										<p>Back</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gameContainer paddingTop container" id="teamSpace">
+					</div>
+				</div>
+				<div id="page-User" class="col-12 current">
+					<div class="userSpace container">
+						<div class="d-flex justify-content-center align-middle oculto" id="log1">
+							<button type="button" class="btn btn-default loginsGoogle login" id="login"><img src="./Soccer League_files/google.png"> Log in with Google</button>
+						</div>
+						<div class="container logsSpace">
+							<div id="helloSpace" class="greetings row justify-content-center">
+								<div class="col-1">
+									<img src="./Soccer League_files/hand.png">
+								</div>
+								<div id="helloName" class="col-5">
+
+								<p id="actualGreeting" style="display-inline">Hola, Ruth!!!</p></div>
+								<div class="col-6 d-flex justify-content-center" id="logout">
+									<button type="button" class="btn btn-default loginsGoogle logout" id="login"><img src="./Soccer League_files/google.png"> Log out</button>
+								</div>
+							</div>
+
+
+						</div>
+						<div class="chatSpace">
+							<div class="messagesSpace">
+								<div id="posts"><div class="othersSMS">hola</div><div class="othersSMS"></div><div class="othersSMS">queeee</div><div class="othersSMS">vale</div><div class="othersSMS">hola</div><div class="othersSMS">holaaaaa</div><div class="othersSMS">yes</div><div class="othersSMS">asd</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">afsaf</div><div class="othersSMS">sfasf</div><div class="othersSMS">asdasf</div><div class="othersSMS">hola</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasdasfasffffsaasdasd</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">aasfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasfasfafpsiaosf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asdasfasf</div><div class="othersSMS">asasf</div><div class="othersSMS">asfasfasf</div><div class="othersSMS">safsaf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">asfasf</div><div class="othersSMS">zxcaxc</div><div class="othersSMS">asfasfaf</div><div class="othersSMS"></div><div class="othersSMS"></div><div class="othersSMS"></div><div class="othersSMS"></div><div class="othersSMS">sadasd</div><div class="othersSMS"></div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasf</div><div class="othersSMS">sadas</div><div class="othersSMS">asfasf</div><div class="othersSMS">ljhlh</div><div class="othersSMS">asdasd</div><div class="othersSMS"></div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">sdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">sadas</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">como vas?</div><div class="othersSMS">bien?</div><div class="othersSMS">asdas</div><div class="othersSMS">asdas</div><div class="othersSMS">patata</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasdas</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdas</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div><div class="othersSMS">asdasd</div></div>
+							</div>
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-8 inputSpace">
+										<input id="inputSpace" type="text" placeholder="Your message...">
+									</div>
+									<div class="col-4 buttonSendSMS">
+										<div class=" col-12" id="create-post">Send</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="page-stadium" class="col-12">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="backSpace col-12">
+								<div class="row">
+									<div class="col-1 backimage">
+										<img class="" src="./Soccer League_files/arrow.png">
+									</div>
+									<div class="backtext col-11">
+										<p>Back</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gameContainer paddingTop container" id="stadiumSpace">
+						<div><iframe src="./Soccer League_files/embed.html"></iframe></div>
+					</div>
+				</div>
+				<div id="page-teamsList" class="col-12">
+					<div class="mainSchedule container-fluid">
+						<div class="row">
+							<div class="col-12 TLtitle">
+								<p class="text-center">Teams</p>
+							</div>
+							<div id="teams" class="col-12 specificEquipo">
+			<div class="TLspaces row align-items-center" teamnumberid="001">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/cd_castellon.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">CD Castellón</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" teamnumberid="002">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/FC_Barcelona-logo.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">FC Barcelona</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" teamnumberid="003">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/girona.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Girona FC</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" teamnumberid="004">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/borriol.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">CF Borriol</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" teamnumberid="005">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/celtic.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Celtic FC</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" teamnumberid="006">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/zaragoza.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Zaragoza Femenino</p>
+			</div>
+			</div>
+			<div class="TLspaces row align-items-center" teamnumberid="007">
+				<div class="LOGPlogo col-1">
+					<img src="./Soccer League_files/ubiqum.png">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">Ubiqum FC</p>
+			</div>
+			</div>
+		</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./Soccer League_files/firebase.js"></script>
+		<script id="firebaseScript">
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyCzKm04XujI1NRJnamZgw8OBkszj6mYmk4",
+				authDomain: "nysl-af8b6.firebaseapp.com",
+				databaseURL: "https://nysl-af8b6.firebaseio.com",
+				projectId: "nysl-af8b6",
+				storageBucket: "nysl-af8b6.appspot.com",
+				messagingSenderId: "113423591247"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script src="./Soccer League_files/javascript.js"></script>
+		<script id="template_teamsList" type="x-tmpl-mustache">
+			{{#equipos}}
+			<div class="TLspaces row align-items-center" teamNumberID = "{{ID}}">
+				<div class="LOGPlogo col-1">
+					<img src="{{logo}}">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">{{nombre}}</p>
+			</div>
+			</div>
+			{{/equipos}}
+		</script>
+		<script id="template_stadiumsList" type="x-tmpl-mustache">
+			{{#equipos}}
+			<div class="TLspaces row align-items-center" stadiumNumberID = "{{ID}}">
+				<div class="LOGPlogo col-1">
+					<img src="{{logo}}">
+			</div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">{{estadio}}</p>
+			</div>
+			</div>
+			{{/equipos}}
+		</script>
+		<script id="template_specificTeam" type="x-tmpl-mustache">
+						<div class="row">
+							<div class="col-12">
+								<p class="text-center teamTitle">{{nombre}}</p>
+			</div>
+			</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-12 location" id="stadiumNameInTeam" stadiumNumberID2 = "{{ID}}">
+									<p class="text-center">Stadium: {{estadio}}</p>
+			</div>
+			</div>
+			</div>
+						<div class="row">
+							<div class="col-12 teamEscudo d-flex justify-content-center">
+								<img src="{{logo}}">
+			</div>
+			</div>
+						<div class="container">
+
+
+			<div class="moreInfo row">
+			<div class="col-12"><p class="littleFont"  style="display:inline">President: </p><p  style="display:inline">{{president}}</p></div>
+			<div class="col-12"><p class="littleFont"  style="display:inline">Coach:</p><p  style="display:inline"> {{coach}}</p></div>
+			<div class="col-12"><p class="littleFont"  style="display:inline">Foundation: </p><p  style="display:inline">{{foundation}}</p></div>
+			<div class="teamImage col-12"><img src="{{image}}"></div>
+			<div class="col-12" style="text-align:center">
+									<a href="http://www.{{web}}">www.{{web}}</a>
+			</div>
+			<div class="container-fluid rrss">
+			<div class="row justify-content-center">
+			<div class="col-1 rrssP0">
+									<a href="{{twitter}}" class="rrss"><img src="logos/twitter.png"></a>
+			</div>
+				<div class="col-1 rrssP0">
+									<a href="{{facebook}}" class="rrss"><img src="logos/facebook.png"></a>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+		</script>
+		<script id="template_specificStadium" type="x-tmpl-mustache">
+		<div class="row">
+			<div class="col-12">
+				<p class="teamTitle text-center">{{estadio}}</p>
+			</div>
+			<div class="col-12 d-flex justify-content-center">
+				<img class="mapImage" src="{{logo}}">
+			</div>
+			<div class="col-12">
+				<p class="text-center adress">{{dirección}}, <br> {{CP}}, {{Ciudad}}.</p>
+			</div>
+			<div class="col-12 googleMap">
+			<iframe src="{{iframe}}" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>
+
+			</div>
+			<div class="col-12 justify-content-center mapLink">
+					<a href="{{Maps}}">Open Google Maps</a>
+			</div>
+			</div>
+
+		</script>
+	
+
+<iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" tabindex="0" vspace="0" width="100%" id="I0_1515707642867" name="I0_1515707642867" src="./Soccer League_files/iframe.html" style="position: absolute; top: -100px; width: 1px; height: 1px;"></iframe></body></html>

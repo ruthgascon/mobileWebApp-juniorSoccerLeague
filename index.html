@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Soccer League</title>
+        <meta charset="utf-8">
+        <link rel="icon" href="logos/NYSL_logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--		stylesheet css-->
+        <link rel="stylesheet" href="styles/styles.css">
+        <!--		jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--		mustache-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+        <!--		bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <!--		mobile app settings-->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <meta name="apple-mobile-web-app-title" content="NYSL">
+        <!--LAUNCH IMAGE-->
+        <link rel="apple-touch-startup-image" href="images/launch2.png">
+        <!--ICON -->
+        <link rel="apple-touch-icon" href="images/logo_60.jpg">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/logo_76.jpg">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/logo_120.jpg">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/logo_152.jpg">
+    </head>
+
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="#page-index" class="active">Matches</a>
+            <a href="#page-teamsList">Teams</a>
+            <a href="#page-stadiums">Stadiums</a>
+            <a href="#page-User" id="chatSideNav">Chats</a>
+        </div>
+
+        <div class="mainContainer container-fluid" id="mainContainer">
+            <nav class="navbar navbar-default navigationBar">
+                <div class="container-fluid">
+                    <div class="row menuButton">
+                        <div class="col-1 col-offset-1">
+                            <div id="nav-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row nav navbar-nav navbar-right" id="userPageLink">
+                        <a href="#page-User" class="userIcon"></a>
+                    </div>
+                </div>
+            </nav>
+            <div class="pageMarginTop row" id="pages">
+                <div id="page-index" class="current col-12">
+                    <div id="loader" class="row justify-content-center">
+                        <div class="loader marginTop2">
+                        </div>
+                    </div>
+                    <div class="oculto mainSchedule" id="mainSchedule">
+                        <div class="LOGPdaySchedule container-fluid" id="matchesSpace">
+                        </div>
+                    </div>
+                </div>
+                <div id="page-gameDetail" class="col-12">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="backSpace col-12">
+                                <div class="row">
+                                    <div class="col-1 backimage">
+                                        <img class="" src="logos/arrow.png">
+                                    </div>
+                                    <div class="backtext col-11">
+                                        <p>Back</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gameContainer container col-12" id="matchSpace">
+
+
+                    </div>
+                </div>
+                <div id="page-stadiums" class="col-12">
+                    <div class="mainSchedule container-fluid">
+                        <div class="row">
+                            <div class="col-12 TLtitle">
+                                <p class="text-center">Stadiums</p>
+                            </div>
+                            <div id="stadiumsSpace" class="col-12 specificEquipo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-team" class="col-12">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="backSpace col-12">
+                                <div class="row">
+                                    <div class="col-1 backimage">
+                                        <img class="" src="logos/arrow.png">
+                                    </div>
+                                    <div class="backtext col-11">
+                                        <p>Back</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gameContainer paddingTop container" id="teamSpace">
+                    </div>
+                </div>
+                <div id="page-stadium" class="col-12">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="backSpace col-12">
+                                <div class="row">
+                                    <div class="col-1 backimage">
+                                        <img class="" src="logos/arrow.png">
+                                    </div>
+                                    <div class="backtext col-11">
+                                        <p>Back</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gameContainer paddingTop container" id="stadiumSpace">
+                        <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.8643364725294!2d2.1612818154261553!3d41.39875247926312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a33d2f431d45%3A0x3f1fd71f16834f39!2sUbiqum+Code+Academy!5e0!3m2!1ses!2ses!4v1514990169002"></iframe></div>
+                    </div>
+                </div>
+                <div id="page-teamsList" class="col-12">
+                    <div class="mainSchedule container-fluid">
+                        <div class="row">
+                            <div class="col-12 TLtitle">
+                                <p class="text-center">Teams</p>
+                            </div>
+                            <div id="teams" class="col-12 specificEquipo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-User" class="col-12">
+                    <div class="userSpace container-fluid">
+                        <div class="d-flex justify-content-center align-middle" id="log1">
+                            <button type="button" class="btn btn-default loginsGoogle login" id="login"><img src="logos/google.png"> Log in with Google</button>
+                        </div>
+                        <div class="container-fluid logsSpace">
+                            <div id="helloSpace" class="greetings row oculto">
+                                <div class="container-fluid">
+                                    <div class="sayHi d-flex justify-content-center">
+                                        <div>
+                                            <img src="logos/hand.png">
+                                        </div>
+                                        <div id="helloName">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center" id="logout">
+                                        <button type="button" class="btn btn-default loginsGoogle logout" id="logout"><img src="logos/google.png"> Log out</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chatSelector" class="oculto">
+                            <div class="chatsSelector container-fluid">
+                                <div id="match1Chat" class="chatSelectorMatch row justify-content-center">
+                                    <div class="col-12">
+                                        <img src="logos/cd_castellon.png">
+                                        <img src="logos/celtic.png">
+                                    </div>
+                                    <a class="col-12" href="#page-Chat1">Castellón - Celtic</a>
+                                </div>
+                                <div id="match2Chat" class="chatSelectorMatch row justify-content-cente">
+                                    <div class="col-12">
+                                        <img src="logos/zaragoza.png">
+                                        <img src="logos/borriol.png">
+                                    </div>
+                                    <a class="col-12" href="#page-Chat2">Zaragoza - Borriol</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-Chat1" class="col-12">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="backSpaceChat col-12">
+                                <div class="row">
+                                    <div class="col-1 backimage">
+                                        <img class="" src="logos/arrow.png">
+                                    </div>
+                                    <div class="backtext col-11">
+                                        <p>Chats</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userSpace chatSpaceGeneral container-fluid">
+                        <div class="matchNameChat d-flex justify-content-center">
+                            <p>MATCH 1</p>
+                        </div>
+                        <div class="chatSpace oculto container-fluid">
+                            <div class="messagesSpace" id="messagesSpaceCH1">
+                                <div class="oculto row d-flex justify-content-center" id="morePosts"><div class="morePosts"><p>...</p></div>
+                                </div>
+<!--                                 <div class="oculto" id="posts"></div>-->
+                                <div id="posts"></div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="inputSpace">
+                                        <input id="inputSpace" type="text" placeholder="Your message...">
+                                    </div>
+                                    <div class="sendSpace">
+                                        <div class="buttonSendSMS" id="create-post">
+                                            <img src="logos/send2.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="page-Chat2" class="col-12">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="backSpaceChat col-12">
+                                <div class="row">
+                                    <div class="col-1 backimage">
+                                        <img class="" src="logos/arrow.png">
+                                    </div>
+                                    <div class="backtext col-11">
+                                        <p>Chats</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userSpace chatSpaceGeneral container-fluid">
+                        <div class="matchNameChat d-flex justify-content-center">
+                            <p>MATCH 2</p>
+                        </div>
+                        <div class="chatSpace oculto container-fluid">
+                            <div class="messagesSpace" id="messagesSpaceCH2">
+                                <div class="row d-flex justify-content-center" id="morePostsCH2">
+                                </div>
+                                <div id="postsCH2"></div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="inputSpace">
+                                        <input id="inputSpaceCH2" type="text" placeholder="Your message...">
+                                    </div>
+                                    <div class="sendSpace">
+                                        <div class="buttonSendSMS" id="create-postCH2">
+                                            <img src="logos/send2.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script id="firebaseScript">
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCzKm04XujI1NRJnamZgw8OBkszj6mYmk4",
+                authDomain: "nysl-af8b6.firebaseapp.com",
+                databaseURL: "https://nysl-af8b6.firebaseio.com",
+                projectId: "nysl-af8b6",
+                storageBucket: "nysl-af8b6.appspot.com",
+                messagingSenderId: "113423591247"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="javascript/javascript.js"></script>
+        <script id="template_teamsList" type="x-tmpl-mustache">
+			{{#equipos}}
+			<div class="TLspaces row align-items-center" teamNumberID = "{{ID}}">
+				<div class="LOGPlogo col-1">
+					<img src="{{logo}}">
+            </div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">{{nombre}}</p>
+            </div>
+            </div>
+			{{/equipos}}
+        </script>
+        <script id="template_stadiumsList" type="x-tmpl-mustache">
+			{{#equipos}}
+			<div class="TLspaces row align-items-center" stadiumNumberID = "{{ID}}">
+				<div class="LOGPlogo col-1">
+					<img src="{{logo}}">
+            </div>
+				<div class="col-11">
+					<p class="TLteam text-left align-middle">{{estadio}}</p>
+            </div>
+            </div>
+			{{/equipos}}
+        </script>
+        <script  id="template_specificTeam" type="x-tmpl-mustache">
+						<div class="row">
+							<div class="col-12">
+								<p class="text-center teamTitle">{{nombre}}</p>
+            </div>
+            </div>
+						<div class="container">
+							<div class="row">
+								<div class="col-12 location" id="stadiumNameInTeam" stadiumNumberID2 = "{{ID}}">
+									<p class="text-center">Stadium: {{estadio}}</p>
+            </div>
+            </div>
+            </div>
+						<div class="row">
+							<div class="col-12 teamEscudo d-flex justify-content-center">
+								<img src="{{logo}}">
+            </div>
+            </div>
+						<div class="container">
+			<div class="moreInfo row">
+			<div class="col-12"><p class="littleFont"  style="display:inline">President: </p><p  style="display:inline">{{president}}</p></div>
+			<div class="col-12"><p class="littleFont"  style="display:inline">Coach:</p><p  style="display:inline"> {{coach}}</p></div>
+			<div class="col-12"><p class="littleFont"  style="display:inline">Foundation: </p><p  style="display:inline">{{foundation}}</p></div>
+			<div class="teamImage col-12"><img src="{{image}}"></div>
+			<div class="col-12" style="text-align:center">
+									<a href="http://www.{{web}}">www.{{web}}</a>
+            </div>
+			<div class="container-fluid rrss">
+			<div class="row justify-content-center">
+			<div class="col-1 rrssP0">
+									<a href="{{twitter}}" class="rrss"><img src="logos/twitter.png"></a>
+            </div>
+				<div class="col-1 rrssP0">
+									<a href="{{facebook}}" class="rrss"><img src="logos/facebook.png"></a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </script>
+        <script  id="template_specificStadium" type="x-tmpl-mustache">
+		<div class="row">
+			<div class="col-12">
+				<p class="teamTitle text-center">{{estadio}}</p>
+            </div>
+			<div class="col-12 d-flex justify-content-center">
+				<img class="mapImage" src="{{logo}}">
+            </div>
+			<div class="col-12">
+				<p class="text-center adress">{{dirección}}, <br> {{CP}}, {{Ciudad}}.</p>
+            </div>
+			<div class="col-12 googleMap">
+			<iframe src="{{iframe}}" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>
+
+            </div>
+			<div class="col-12 justify-content-center mapLink">
+					<a href="{{Maps}}">Open Google Maps</a>
+            </div>
+            </div>
+
+        </script>
+    </body>
+</html>
